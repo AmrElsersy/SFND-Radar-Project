@@ -89,7 +89,7 @@ Mix = reshape(Mix,[Nr,Nd]);
 %run the FFT on the beat signal along the range bins dimension (Nr) and
 %normalize.
 signal_fft=fft(Mix,Nr);
-signal_fft = abs(signal_fft); % absolute
+signal_fft = abs(signal_fft/L); % absolute
 
 signal_fft = signal_fft(1:L/2+1);% half samples
 
